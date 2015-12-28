@@ -4,10 +4,10 @@ int main()
 {
 	int input = 0;
 	Node * node = new Node;
-	HashFunction * hf = new HashFunction;
+	DivideHash * dh = new DivideHash;
 	scanf_s("%d", &input);
-	node->key = hf->divide_hash(input);
-	node->value = hf->value_check(node->key);
-	cout << node->key << "\n" << node->value << endl;
+	node->key = dh->divide_hash(input);
+	node->value = dh->value_check(node->key);
+	cout << "Key : " << node->key << "\n" << "Value : " << node->value << endl;
 	return 0;
 }

@@ -23,16 +23,16 @@ public :
 	}
 };
 
-class HashFunction
+class DivideHash
 {
 private:
 	int table[HASH_SIZE] = { 0, };
 public :
-	HashFunction()
+	DivideHash()
 	{
 
 	}
-	~HashFunction()
+	~DivideHash()
 	{
 
 	}
