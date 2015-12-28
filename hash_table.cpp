@@ -14,3 +14,15 @@ int DivideHash::value_check(int key)
 {
 	return table[key];
 }
+
+unsigned int DigitsFoldingHash::digitsfolding_hash(string value)
+{
+	int sum = 0;
+	for (int i = 0; i < 1024; i++) {
+		if (!value[i]) {
+			break;
+		}
+		sum += value[i];
+	}
+	return sum;
+}

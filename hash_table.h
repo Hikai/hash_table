@@ -3,6 +3,7 @@
 #define _HASH_TABLE_H_
 
 #include <iostream>
+#include <string>
 
 #define HASH_SIZE 139
 
@@ -23,6 +24,9 @@ public :
 	}
 };
 
+//Table size = prime number
+//Better good number that 2 square number nowhere near prime number
+//ex = 139
 class DivideHash
 {
 private:
@@ -40,8 +44,19 @@ public :
 	int value_check(int);
 };
 
+
+class DigitsFoldingHash
+{
+public :
+	DigitsFoldingHash()
+	{
+
+	}
+	~DigitsFoldingHash()
+	{
+
+	}
+	unsigned int digitsfolding_hash(string);
+};
 #endif
 
-//Table size = prime number
-//Better good number that 2 square number nowhere near prime number
-//ex = 139
