@@ -1,5 +1,10 @@
 #include "hash_table.h"
 
+void Node::destroy_node(Node * node)
+{
+	delete node;
+}
+
 unsigned int DivideHash::divide_hash(int value)
 {
 	unsigned int key = value % HASH_SIZE;

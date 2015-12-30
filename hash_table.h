@@ -22,6 +22,7 @@ public :
 	{
 
 	}
+	void destroy_node(Node *);
 };
 
 //Table size = prime number

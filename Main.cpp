@@ -15,5 +15,9 @@ int main()
 	cin >> input_s;
 	node2->key = dfh->digitsfolding_hash(input_s);
 	cout << "Digits folding hash address = " << node2->key << endl;
+	node->destroy_node(node);
+	node2->destroy_node(node2);
+	delete dh;
+	delete dfh;
 	return 0;
 }
