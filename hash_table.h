@@ -31,7 +31,7 @@ public :
 class DivideHash
 {
 private:
-	int table[HASH_SIZE] = { 0, };
+	int divide_table[HASH_SIZE] = { 0, };
 public :
 	DivideHash()
 	{
@@ -45,9 +45,10 @@ public :
 	int value_check(int);
 };
 
-
 class DigitsFoldingHash
 {
+private :
+	string digits_table[HASH_SIZE] = { "", };
 public :
 	DigitsFoldingHash()
 	{
@@ -58,6 +59,7 @@ public :
 
 	}
 	unsigned int digitsfolding_hash(string);
+	string value_check(int);
 };
-#endif
 
+#endif

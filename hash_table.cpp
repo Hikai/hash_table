@@ -11,13 +11,13 @@ unsigned int DivideHash::divide_hash(int value)
 	while (key > HASH_SIZE) {
 		key = value % HASH_SIZE;
 	}
-	table[key] = value;
+	divide_table[key - 1] = value;
 	return key;
 }
 
 int DivideHash::value_check(int key)
 {
-	return table[key];
+	return divide_table[key - 1];
 }
 
 unsigned int DigitsFoldingHash::digitsfolding_hash(string value)
@@ -29,5 +29,11 @@ unsigned int DigitsFoldingHash::digitsfolding_hash(string value)
 		}
 		sum += value[i];
 	}
+	digits_table[sum - 1] = value;
 	return sum;
+}
+
+string DigitsFoldingHash::value_check(int key)
+{
+	return digits_table[key - 1];
 }
